@@ -1,0 +1,251 @@
+/* General Style */
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+.main-btn {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    text-transform: uppercase;
+}
+.main-btn:hover {
+    color: var(--yellow-color);
+}
+.main-title::after {
+    position: absolute;
+    content: "";
+    width: 120px;
+    background-color: var(--green-color);
+    height: 2px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* End General Style */
+
+/* Start Navbar Section */
+.navbar {
+    background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--green-color);
+}
+.navbar .search {
+    border-left: 1px solid var(--green-color);
+}
+.navbar .search svg {
+    color: var(--green-color);
+}
+.navbar .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded ="true"] {
+    border-color: var(--green-color);
+}
+/* End Navbar Section */
+
+/* Start Landing Page */
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 70px);
+}
+/* End Landing Page */
+
+/* Start Features Section */
+.features .icon-holder {
+    height: 200px;
+}
+.features .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .icon-holder .number {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.features .icon-holder .icon {
+    color: var(--green-color);
+}
+.features .feat h4 {
+    color: var(--yellow-color);
+}
+/* End Features Section */
+
+/* Start our-work Section */
+.our-work {
+    background-color: var(--section-color);
+}
+.our-work ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.our-work ul .active {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.our-work ul li:not(.active):hover {
+    color: var(--red-color);
+}
+.our-work .box {
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.our-work .box::before {
+    position: absolute;
+    content: attr(data-work);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #33d1cc96;
+    transition: 0.3s;
+    transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before {
+    transform: translateX(0);
+}
+.our-work .more {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    
+}
+/* End our-work Section */
+
+/* Start Stuff Section */
+.stuff .description {
+    max-width: 500px;
+}
+.stuff .order {
+    color: var(--yellow-color);
+    background-color: var(--red-color);
+}
+/* End Stuff Section */
+
+/* Start Team Section */
+.team {
+    background-color: var(--section-color);
+}
+.team h2 {
+    color: var(--yellow-color);
+}
+.team .row .box .image{
+    background-color: white;
+}
+.team .txt {
+    padding: 10px;
+    font-size: 25px;
+    background-color: var(--green-color);
+    color: white;
+}
+.team .txt + p {
+    padding: 20px;
+    font-size: 17px;
+    background-color: white;
+}
+/* End Team Section */
+
+/* Start Project Section */
+.project {
+    background-color: var(--dark-color);
+}
+/* End Project Section */
+
+/* Start Form Section */
+.subscribe {
+    background-color: var(--yellow-color);
+}
+.subscribe div > div{
+    font-size: 23px;
+}
+.subscribe form input[type= "text"] {
+    border: none;
+    border-bottom: 1px solid white;
+}
+.subscribe form input[type= "submit"] {
+    color: var(--yellow-color);
+    background-color: var(--dark-color);
+    border: none;
+}
+.subscribe form input:hover {
+    outline: none;
+}
+.subscribe ::placeholder {
+    color: white;
+}
+/* End Form Section */
+
+/* Start Footer Section */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+}
+footer .box-1 .copy .one {
+    color: var(--green-color);
+}
+footer .box-1 .copy .two {
+    color: var(--yellow-color);
+}
+footer .box-2 .content p {
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+footer .box-2 .content p:hover {
+    color: white;
+}
+footer .box-4 a {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+footer .box-4 a:hover {
+    color: var(--yellow-color);
+}
+footer .box-4 .icons li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+footer .box-4 .icons li.face {
+    background-color: #1877f2;
+}
+footer .box-4 .icons li.twitt {
+    background-color: #0077b5;
+}
+footer .box-4 .icons li.linked {
+    background-color: #0077b5;
+}
+footer .box-4 .icons li.ytube {
+    background-color: #ff0000;
+}
+footer .box-4 .icons li:not(:last-child){
+    margin-right: 10px;
+}
+/* End Footer Section */
